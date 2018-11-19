@@ -1,0 +1,6 @@
+{
+  "groupId":"de.unigoettingen.sub",
+  "artifactId":"CounterClient",
+  "artifactVersion":"1.0.0",
+  "library":"feign"
+}

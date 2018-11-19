@@ -1,0 +1,11 @@
+{
+  "gitUserId":"subugoe",
+  "gitRepoId":"CounterClientPHP",
+  "artifactVersion":"1.0.0",
+  "composerVendorName":"subugoe",
+  "composerProjectName":"counter-client",
+  "pagkageName": "CounterClient",
+  "invokerPackage": "Subugoe\\CounterClient",
+  "variableNamingConvention": "camelCase",
+  "hideGenerationTimestamp": true
+}
