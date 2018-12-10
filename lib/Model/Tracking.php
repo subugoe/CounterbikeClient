@@ -64,13 +64,21 @@ class Tracking implements ModelInterface, ArrayAccess
         'platform' => 'string',
         'docDatabase' => 'string',
         'trackingEvent' => 'string',
-        'trackingDate' => '\DateTime',
         'documentId' => 'string',
         'documentUrl' => 'string',
         'documentTitle' => 'string',
         'chapter' => 'string',
         'author' => 'string',
         'publisher' => 'string',
+        'issnPrint' => 'string',
+        'issnOnline' => 'string',
+        'isbn' => 'string',
+        'isan' => 'string',
+        'ismn' => 'string',
+        'isrc' => 'string',
+        'istc' => 'string',
+        'doi' => 'string',
+        'proprietaryId' => 'string',
         'accessMethod' => 'string',
         'accessType' => 'string',
         'dataType' => 'string',
@@ -78,7 +86,8 @@ class Tracking implements ModelInterface, ArrayAccess
         'reportType' => 'string',
         'yop' => 'string',
         'sessionId' => 'string',
-        'created' => 'int'
+        'created' => 'int',
+        'trackingDate' => '\DateTime'
     ];
 
     /**
@@ -93,13 +102,21 @@ class Tracking implements ModelInterface, ArrayAccess
         'platform' => null,
         'docDatabase' => null,
         'trackingEvent' => null,
-        'trackingDate' => 'date-time',
         'documentId' => null,
         'documentUrl' => null,
         'documentTitle' => null,
         'chapter' => null,
         'author' => null,
         'publisher' => null,
+        'issnPrint' => null,
+        'issnOnline' => null,
+        'isbn' => null,
+        'isan' => null,
+        'ismn' => null,
+        'isrc' => null,
+        'istc' => null,
+        'doi' => null,
+        'proprietaryId' => null,
         'accessMethod' => null,
         'accessType' => null,
         'dataType' => null,
@@ -107,7 +124,8 @@ class Tracking implements ModelInterface, ArrayAccess
         'reportType' => null,
         'yop' => null,
         'sessionId' => null,
-        'created' => null
+        'created' => null,
+        'trackingDate' => 'date-time'
     ];
 
     /**
@@ -143,13 +161,21 @@ class Tracking implements ModelInterface, ArrayAccess
         'platform' => 'platform',
         'docDatabase' => 'docDatabase',
         'trackingEvent' => 'trackingEvent',
-        'trackingDate' => 'trackingDate',
         'documentId' => 'documentId',
         'documentUrl' => 'documentUrl',
         'documentTitle' => 'documentTitle',
         'chapter' => 'chapter',
         'author' => 'author',
         'publisher' => 'publisher',
+        'issnPrint' => 'issnPrint',
+        'issnOnline' => 'issnOnline',
+        'isbn' => 'isbn',
+        'isan' => 'isan',
+        'ismn' => 'ismn',
+        'isrc' => 'isrc',
+        'istc' => 'istc',
+        'doi' => 'doi',
+        'proprietaryId' => 'proprietaryId',
         'accessMethod' => 'accessMethod',
         'accessType' => 'accessType',
         'dataType' => 'dataType',
@@ -157,7 +183,8 @@ class Tracking implements ModelInterface, ArrayAccess
         'reportType' => 'reportType',
         'yop' => 'yop',
         'sessionId' => 'sessionId',
-        'created' => 'created'
+        'created' => 'created',
+        'trackingDate' => 'trackingDate'
     ];
 
     /**
@@ -172,13 +199,21 @@ class Tracking implements ModelInterface, ArrayAccess
         'platform' => 'setPlatform',
         'docDatabase' => 'setDocDatabase',
         'trackingEvent' => 'setTrackingEvent',
-        'trackingDate' => 'setTrackingDate',
         'documentId' => 'setDocumentId',
         'documentUrl' => 'setDocumentUrl',
         'documentTitle' => 'setDocumentTitle',
         'chapter' => 'setChapter',
         'author' => 'setAuthor',
         'publisher' => 'setPublisher',
+        'issnPrint' => 'setIssnPrint',
+        'issnOnline' => 'setIssnOnline',
+        'isbn' => 'setIsbn',
+        'isan' => 'setIsan',
+        'ismn' => 'setIsmn',
+        'isrc' => 'setIsrc',
+        'istc' => 'setIstc',
+        'doi' => 'setDoi',
+        'proprietaryId' => 'setProprietaryId',
         'accessMethod' => 'setAccessMethod',
         'accessType' => 'setAccessType',
         'dataType' => 'setDataType',
@@ -186,7 +221,8 @@ class Tracking implements ModelInterface, ArrayAccess
         'reportType' => 'setReportType',
         'yop' => 'setYop',
         'sessionId' => 'setSessionId',
-        'created' => 'setCreated'
+        'created' => 'setCreated',
+        'trackingDate' => 'setTrackingDate'
     ];
 
     /**
@@ -201,13 +237,21 @@ class Tracking implements ModelInterface, ArrayAccess
         'platform' => 'getPlatform',
         'docDatabase' => 'getDocDatabase',
         'trackingEvent' => 'getTrackingEvent',
-        'trackingDate' => 'getTrackingDate',
         'documentId' => 'getDocumentId',
         'documentUrl' => 'getDocumentUrl',
         'documentTitle' => 'getDocumentTitle',
         'chapter' => 'getChapter',
         'author' => 'getAuthor',
         'publisher' => 'getPublisher',
+        'issnPrint' => 'getIssnPrint',
+        'issnOnline' => 'getIssnOnline',
+        'isbn' => 'getIsbn',
+        'isan' => 'getIsan',
+        'ismn' => 'getIsmn',
+        'isrc' => 'getIsrc',
+        'istc' => 'getIstc',
+        'doi' => 'getDoi',
+        'proprietaryId' => 'getProprietaryId',
         'accessMethod' => 'getAccessMethod',
         'accessType' => 'getAccessType',
         'dataType' => 'getDataType',
@@ -215,7 +259,8 @@ class Tracking implements ModelInterface, ArrayAccess
         'reportType' => 'getReportType',
         'yop' => 'getYop',
         'sessionId' => 'getSessionId',
-        'created' => 'getCreated'
+        'created' => 'getCreated',
+        'trackingDate' => 'getTrackingDate'
     ];
 
     /**
@@ -284,13 +329,21 @@ class Tracking implements ModelInterface, ArrayAccess
         $this->container['platform'] = isset($data['platform']) ? $data['platform'] : null;
         $this->container['docDatabase'] = isset($data['docDatabase']) ? $data['docDatabase'] : null;
         $this->container['trackingEvent'] = isset($data['trackingEvent']) ? $data['trackingEvent'] : null;
-        $this->container['trackingDate'] = isset($data['trackingDate']) ? $data['trackingDate'] : null;
         $this->container['documentId'] = isset($data['documentId']) ? $data['documentId'] : null;
         $this->container['documentUrl'] = isset($data['documentUrl']) ? $data['documentUrl'] : null;
         $this->container['documentTitle'] = isset($data['documentTitle']) ? $data['documentTitle'] : null;
         $this->container['chapter'] = isset($data['chapter']) ? $data['chapter'] : null;
         $this->container['author'] = isset($data['author']) ? $data['author'] : null;
         $this->container['publisher'] = isset($data['publisher']) ? $data['publisher'] : null;
+        $this->container['issnPrint'] = isset($data['issnPrint']) ? $data['issnPrint'] : null;
+        $this->container['issnOnline'] = isset($data['issnOnline']) ? $data['issnOnline'] : null;
+        $this->container['isbn'] = isset($data['isbn']) ? $data['isbn'] : null;
+        $this->container['isan'] = isset($data['isan']) ? $data['isan'] : null;
+        $this->container['ismn'] = isset($data['ismn']) ? $data['ismn'] : null;
+        $this->container['isrc'] = isset($data['isrc']) ? $data['isrc'] : null;
+        $this->container['istc'] = isset($data['istc']) ? $data['istc'] : null;
+        $this->container['doi'] = isset($data['doi']) ? $data['doi'] : null;
+        $this->container['proprietaryId'] = isset($data['proprietaryId']) ? $data['proprietaryId'] : null;
         $this->container['accessMethod'] = isset($data['accessMethod']) ? $data['accessMethod'] : null;
         $this->container['accessType'] = isset($data['accessType']) ? $data['accessType'] : null;
         $this->container['dataType'] = isset($data['dataType']) ? $data['dataType'] : null;
@@ -299,6 +352,7 @@ class Tracking implements ModelInterface, ArrayAccess
         $this->container['yop'] = isset($data['yop']) ? $data['yop'] : null;
         $this->container['sessionId'] = isset($data['sessionId']) ? $data['sessionId'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
+        $this->container['trackingDate'] = isset($data['trackingDate']) ? $data['trackingDate'] : null;
     }
 
     /**
@@ -310,23 +364,11 @@ class Tracking implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['customerId'] === null) {
-            $invalidProperties[] = "'customerId' can't be null";
-        }
         if ($this->container['platform'] === null) {
             $invalidProperties[] = "'platform' can't be null";
         }
         if ($this->container['trackingEvent'] === null) {
             $invalidProperties[] = "'trackingEvent' can't be null";
-        }
-        if ($this->container['documentId'] === null) {
-            $invalidProperties[] = "'documentId' can't be null";
-        }
-        if ($this->container['documentUrl'] === null) {
-            $invalidProperties[] = "'documentUrl' can't be null";
-        }
-        if ($this->container['documentTitle'] === null) {
-            $invalidProperties[] = "'documentTitle' can't be null";
         }
         if ($this->container['sessionId'] === null) {
             $invalidProperties[] = "'sessionId' can't be null";
@@ -376,7 +418,7 @@ class Tracking implements ModelInterface, ArrayAccess
     /**
      * Gets customerId
      *
-     * @return string
+     * @return string|null
      */
     public function getCustomerId()
     {
@@ -386,7 +428,7 @@ class Tracking implements ModelInterface, ArrayAccess
     /**
      * Sets customerId
      *
-     * @param string $customerId customerId
+     * @param string|null $customerId customerId
      *
      * @return $this
      */
@@ -494,33 +536,9 @@ class Tracking implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets trackingDate
-     *
-     * @return \DateTime|null
-     */
-    public function getTrackingDate()
-    {
-        return $this->container['trackingDate'];
-    }
-
-    /**
-     * Sets trackingDate
-     *
-     * @param \DateTime|null $trackingDate trackingDate
-     *
-     * @return $this
-     */
-    public function setTrackingDate($trackingDate)
-    {
-        $this->container['trackingDate'] = $trackingDate;
-
-        return $this;
-    }
-
-    /**
      * Gets documentId
      *
-     * @return string
+     * @return string|null
      */
     public function getDocumentId()
     {
@@ -530,7 +548,7 @@ class Tracking implements ModelInterface, ArrayAccess
     /**
      * Sets documentId
      *
-     * @param string $documentId documentId
+     * @param string|null $documentId documentId
      *
      * @return $this
      */
@@ -544,7 +562,7 @@ class Tracking implements ModelInterface, ArrayAccess
     /**
      * Gets documentUrl
      *
-     * @return string
+     * @return string|null
      */
     public function getDocumentUrl()
     {
@@ -554,7 +572,7 @@ class Tracking implements ModelInterface, ArrayAccess
     /**
      * Sets documentUrl
      *
-     * @param string $documentUrl documentUrl
+     * @param string|null $documentUrl documentUrl
      *
      * @return $this
      */
@@ -568,7 +586,7 @@ class Tracking implements ModelInterface, ArrayAccess
     /**
      * Gets documentTitle
      *
-     * @return string
+     * @return string|null
      */
     public function getDocumentTitle()
     {
@@ -578,7 +596,7 @@ class Tracking implements ModelInterface, ArrayAccess
     /**
      * Sets documentTitle
      *
-     * @param string $documentTitle documentTitle
+     * @param string|null $documentTitle documentTitle
      *
      * @return $this
      */
@@ -657,6 +675,222 @@ class Tracking implements ModelInterface, ArrayAccess
     public function setPublisher($publisher)
     {
         $this->container['publisher'] = $publisher;
+
+        return $this;
+    }
+
+    /**
+     * Gets issnPrint
+     *
+     * @return string|null
+     */
+    public function getIssnPrint()
+    {
+        return $this->container['issnPrint'];
+    }
+
+    /**
+     * Sets issnPrint
+     *
+     * @param string|null $issnPrint Print International Standard Serial Number
+     *
+     * @return $this
+     */
+    public function setIssnPrint($issnPrint)
+    {
+        $this->container['issnPrint'] = $issnPrint;
+
+        return $this;
+    }
+
+    /**
+     * Gets issnOnline
+     *
+     * @return string|null
+     */
+    public function getIssnOnline()
+    {
+        return $this->container['issnOnline'];
+    }
+
+    /**
+     * Sets issnOnline
+     *
+     * @param string|null $issnOnline Online International Standard Serial Number
+     *
+     * @return $this
+     */
+    public function setIssnOnline($issnOnline)
+    {
+        $this->container['issnOnline'] = $issnOnline;
+
+        return $this;
+    }
+
+    /**
+     * Gets isbn
+     *
+     * @return string|null
+     */
+    public function getIsbn()
+    {
+        return $this->container['isbn'];
+    }
+
+    /**
+     * Sets isbn
+     *
+     * @param string|null $isbn International Standard Book Number
+     *
+     * @return $this
+     */
+    public function setIsbn($isbn)
+    {
+        $this->container['isbn'] = $isbn;
+
+        return $this;
+    }
+
+    /**
+     * Gets isan
+     *
+     * @return string|null
+     */
+    public function getIsan()
+    {
+        return $this->container['isan'];
+    }
+
+    /**
+     * Sets isan
+     *
+     * @param string|null $isan International Standard Audiovisual Number
+     *
+     * @return $this
+     */
+    public function setIsan($isan)
+    {
+        $this->container['isan'] = $isan;
+
+        return $this;
+    }
+
+    /**
+     * Gets ismn
+     *
+     * @return string|null
+     */
+    public function getIsmn()
+    {
+        return $this->container['ismn'];
+    }
+
+    /**
+     * Sets ismn
+     *
+     * @param string|null $ismn International Standard Music Number
+     *
+     * @return $this
+     */
+    public function setIsmn($ismn)
+    {
+        $this->container['ismn'] = $ismn;
+
+        return $this;
+    }
+
+    /**
+     * Gets isrc
+     *
+     * @return string|null
+     */
+    public function getIsrc()
+    {
+        return $this->container['isrc'];
+    }
+
+    /**
+     * Sets isrc
+     *
+     * @param string|null $isrc The International Standard Recording Code
+     *
+     * @return $this
+     */
+    public function setIsrc($isrc)
+    {
+        $this->container['isrc'] = $isrc;
+
+        return $this;
+    }
+
+    /**
+     * Gets istc
+     *
+     * @return string|null
+     */
+    public function getIstc()
+    {
+        return $this->container['istc'];
+    }
+
+    /**
+     * Sets istc
+     *
+     * @param string|null $istc International Standard Text Code
+     *
+     * @return $this
+     */
+    public function setIstc($istc)
+    {
+        $this->container['istc'] = $istc;
+
+        return $this;
+    }
+
+    /**
+     * Gets doi
+     *
+     * @return string|null
+     */
+    public function getDoi()
+    {
+        return $this->container['doi'];
+    }
+
+    /**
+     * Sets doi
+     *
+     * @param string|null $doi Digital Object Identifier
+     *
+     * @return $this
+     */
+    public function setDoi($doi)
+    {
+        $this->container['doi'] = $doi;
+
+        return $this;
+    }
+
+    /**
+     * Gets proprietaryId
+     *
+     * @return string|null
+     */
+    public function getProprietaryId()
+    {
+        return $this->container['proprietaryId'];
+    }
+
+    /**
+     * Sets proprietaryId
+     *
+     * @param string|null $proprietaryId proprietaryId
+     *
+     * @return $this
+     */
+    public function setProprietaryId($proprietaryId)
+    {
+        $this->container['proprietaryId'] = $proprietaryId;
 
         return $this;
     }
@@ -849,6 +1083,30 @@ class Tracking implements ModelInterface, ArrayAccess
     public function setCreated($created)
     {
         $this->container['created'] = $created;
+
+        return $this;
+    }
+
+    /**
+     * Gets trackingDate
+     *
+     * @return \DateTime|null
+     */
+    public function getTrackingDate()
+    {
+        return $this->container['trackingDate'];
+    }
+
+    /**
+     * Sets trackingDate
+     *
+     * @param \DateTime|null $trackingDate trackingDate
+     *
+     * @return $this
+     */
+    public function setTrackingDate($trackingDate)
+    {
+        $this->container['trackingDate'] = $trackingDate;
 
         return $this;
     }

@@ -119,13 +119,6 @@ class TrackingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "trackingDate"
-     */
-    public function testPropertyTrackingDate()
-    {
-    }
-
-    /**
      * Test attribute "documentId"
      */
     public function testPropertyDocumentId()
@@ -164,6 +157,69 @@ class TrackingTest extends \PHPUnit_Framework_TestCase
      * Test attribute "publisher"
      */
     public function testPropertyPublisher()
+    {
+    }
+
+    /**
+     * Test attribute "issnPrint"
+     */
+    public function testPropertyIssnPrint()
+    {
+    }
+
+    /**
+     * Test attribute "issnOnline"
+     */
+    public function testPropertyIssnOnline()
+    {
+    }
+
+    /**
+     * Test attribute "isbn"
+     */
+    public function testPropertyIsbn()
+    {
+    }
+
+    /**
+     * Test attribute "isan"
+     */
+    public function testPropertyIsan()
+    {
+    }
+
+    /**
+     * Test attribute "ismn"
+     */
+    public function testPropertyIsmn()
+    {
+    }
+
+    /**
+     * Test attribute "isrc"
+     */
+    public function testPropertyIsrc()
+    {
+    }
+
+    /**
+     * Test attribute "istc"
+     */
+    public function testPropertyIstc()
+    {
+    }
+
+    /**
+     * Test attribute "doi"
+     */
+    public function testPropertyDoi()
+    {
+    }
+
+    /**
+     * Test attribute "proprietaryId"
+     */
+    public function testPropertyProprietaryId()
     {
     }
 
@@ -220,6 +276,13 @@ class TrackingTest extends \PHPUnit_Framework_TestCase
      * Test attribute "created"
      */
     public function testPropertyCreated()
+    {
+    }
+
+    /**
+     * Test attribute "trackingDate"
+     */
+    public function testPropertyTrackingDate()
     {
     }
 }
