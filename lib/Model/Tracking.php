@@ -83,7 +83,6 @@ class Tracking implements ModelInterface, ArrayAccess
         'accessType' => 'string',
         'dataType' => 'string',
         'sectionType' => 'string',
-        'reportType' => 'string',
         'yop' => 'string',
         'sessionId' => 'string',
         'created' => 'int',
@@ -121,7 +120,6 @@ class Tracking implements ModelInterface, ArrayAccess
         'accessType' => null,
         'dataType' => null,
         'sectionType' => null,
-        'reportType' => null,
         'yop' => null,
         'sessionId' => null,
         'created' => null,
@@ -180,7 +178,6 @@ class Tracking implements ModelInterface, ArrayAccess
         'accessType' => 'accessType',
         'dataType' => 'dataType',
         'sectionType' => 'sectionType',
-        'reportType' => 'reportType',
         'yop' => 'yop',
         'sessionId' => 'sessionId',
         'created' => 'created',
@@ -218,7 +215,6 @@ class Tracking implements ModelInterface, ArrayAccess
         'accessType' => 'setAccessType',
         'dataType' => 'setDataType',
         'sectionType' => 'setSectionType',
-        'reportType' => 'setReportType',
         'yop' => 'setYop',
         'sessionId' => 'setSessionId',
         'created' => 'setCreated',
@@ -256,7 +252,6 @@ class Tracking implements ModelInterface, ArrayAccess
         'accessType' => 'getAccessType',
         'dataType' => 'getDataType',
         'sectionType' => 'getSectionType',
-        'reportType' => 'getReportType',
         'yop' => 'getYop',
         'sessionId' => 'getSessionId',
         'created' => 'getCreated',
@@ -348,7 +343,6 @@ class Tracking implements ModelInterface, ArrayAccess
         $this->container['accessType'] = isset($data['accessType']) ? $data['accessType'] : null;
         $this->container['dataType'] = isset($data['dataType']) ? $data['dataType'] : null;
         $this->container['sectionType'] = isset($data['sectionType']) ? $data['sectionType'] : null;
-        $this->container['reportType'] = isset($data['reportType']) ? $data['reportType'] : null;
         $this->container['yop'] = isset($data['yop']) ? $data['yop'] : null;
         $this->container['sessionId'] = isset($data['sessionId']) ? $data['sessionId'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
@@ -987,30 +981,6 @@ class Tracking implements ModelInterface, ArrayAccess
     public function setSectionType($sectionType)
     {
         $this->container['sectionType'] = $sectionType;
-
-        return $this;
-    }
-
-    /**
-     * Gets reportType
-     *
-     * @return string|null
-     */
-    public function getReportType()
-    {
-        return $this->container['reportType'];
-    }
-
-    /**
-     * Sets reportType
-     *
-     * @param string|null $reportType reportType
-     *
-     * @return $this
-     */
-    public function setReportType($reportType)
-    {
-        $this->container['reportType'] = $reportType;
 
         return $this;
     }

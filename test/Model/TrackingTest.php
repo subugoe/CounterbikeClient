@@ -252,13 +252,6 @@ class TrackingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "reportType"
-     */
-    public function testPropertyReportType()
-    {
-    }
-
-    /**
      * Test attribute "yop"
      */
     public function testPropertyYop()

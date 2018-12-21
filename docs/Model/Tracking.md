@@ -28,7 +28,6 @@ Name | Type | Description | Notes
 **accessType** | **string** |  | [optional] 
 **dataType** | **string** |  | [optional] 
 **sectionType** | **string** |  | [optional] 
-**reportType** | **string** |  | [optional] 
 **yop** | **string** |  | [optional] 
 **sessionId** | **string** |  | 
 **created** | **int** |  | 
