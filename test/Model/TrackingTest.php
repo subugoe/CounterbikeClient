@@ -126,6 +126,13 @@ class TrackingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "parentId"
+     */
+    public function testPropertyParentId()
+    {
+    }
+
+    /**
      * Test attribute "documentUrl"
      */
     public function testPropertyDocumentUrl()
@@ -136,6 +143,13 @@ class TrackingTest extends \PHPUnit_Framework_TestCase
      * Test attribute "documentTitle"
      */
     public function testPropertyDocumentTitle()
+    {
+    }
+
+    /**
+     * Test attribute "parentTitle"
+     */
+    public function testPropertyParentTitle()
     {
     }
 

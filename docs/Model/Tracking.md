@@ -10,8 +10,10 @@ Name | Type | Description | Notes
 **docDatabase** | **string** |  | [optional] 
 **trackingEvent** | **string** |  | 
 **documentId** | **string** |  | [optional] 
+**parentId** | **string** |  | [optional] 
 **documentUrl** | **string** |  | [optional] 
 **documentTitle** | **string** |  | [optional] 
+**parentTitle** | **string** |  | [optional] 
 **chapter** | **string** |  | [optional] 
 **author** | **string** |  | [optional] 
 **publisher** | **string** |  | [optional] 
