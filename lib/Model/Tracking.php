@@ -65,8 +65,10 @@ class Tracking implements ModelInterface, ArrayAccess
         'docDatabase' => 'string',
         'trackingEvent' => 'string',
         'documentId' => 'string',
+        'parentId' => 'string',
         'documentUrl' => 'string',
         'documentTitle' => 'string',
+        'parentTitle' => 'string',
         'chapter' => 'string',
         'author' => 'string',
         'publisher' => 'string',
@@ -102,8 +104,10 @@ class Tracking implements ModelInterface, ArrayAccess
         'docDatabase' => null,
         'trackingEvent' => null,
         'documentId' => null,
+        'parentId' => null,
         'documentUrl' => null,
         'documentTitle' => null,
+        'parentTitle' => null,
         'chapter' => null,
         'author' => null,
         'publisher' => null,
@@ -160,8 +164,10 @@ class Tracking implements ModelInterface, ArrayAccess
         'docDatabase' => 'docDatabase',
         'trackingEvent' => 'trackingEvent',
         'documentId' => 'documentId',
+        'parentId' => 'parentId',
         'documentUrl' => 'documentUrl',
         'documentTitle' => 'documentTitle',
+        'parentTitle' => 'parentTitle',
         'chapter' => 'chapter',
         'author' => 'author',
         'publisher' => 'publisher',
@@ -197,8 +203,10 @@ class Tracking implements ModelInterface, ArrayAccess
         'docDatabase' => 'setDocDatabase',
         'trackingEvent' => 'setTrackingEvent',
         'documentId' => 'setDocumentId',
+        'parentId' => 'setParentId',
         'documentUrl' => 'setDocumentUrl',
         'documentTitle' => 'setDocumentTitle',
+        'parentTitle' => 'setParentTitle',
         'chapter' => 'setChapter',
         'author' => 'setAuthor',
         'publisher' => 'setPublisher',
@@ -234,8 +242,10 @@ class Tracking implements ModelInterface, ArrayAccess
         'docDatabase' => 'getDocDatabase',
         'trackingEvent' => 'getTrackingEvent',
         'documentId' => 'getDocumentId',
+        'parentId' => 'getParentId',
         'documentUrl' => 'getDocumentUrl',
         'documentTitle' => 'getDocumentTitle',
+        'parentTitle' => 'getParentTitle',
         'chapter' => 'getChapter',
         'author' => 'getAuthor',
         'publisher' => 'getPublisher',
@@ -325,8 +335,10 @@ class Tracking implements ModelInterface, ArrayAccess
         $this->container['docDatabase'] = isset($data['docDatabase']) ? $data['docDatabase'] : null;
         $this->container['trackingEvent'] = isset($data['trackingEvent']) ? $data['trackingEvent'] : null;
         $this->container['documentId'] = isset($data['documentId']) ? $data['documentId'] : null;
+        $this->container['parentId'] = isset($data['parentId']) ? $data['parentId'] : null;
         $this->container['documentUrl'] = isset($data['documentUrl']) ? $data['documentUrl'] : null;
         $this->container['documentTitle'] = isset($data['documentTitle']) ? $data['documentTitle'] : null;
+        $this->container['parentTitle'] = isset($data['parentTitle']) ? $data['parentTitle'] : null;
         $this->container['chapter'] = isset($data['chapter']) ? $data['chapter'] : null;
         $this->container['author'] = isset($data['author']) ? $data['author'] : null;
         $this->container['publisher'] = isset($data['publisher']) ? $data['publisher'] : null;
@@ -554,6 +566,30 @@ class Tracking implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets parentId
+     *
+     * @return string|null
+     */
+    public function getParentId()
+    {
+        return $this->container['parentId'];
+    }
+
+    /**
+     * Sets parentId
+     *
+     * @param string|null $parentId parentId
+     *
+     * @return $this
+     */
+    public function setParentId($parentId)
+    {
+        $this->container['parentId'] = $parentId;
+
+        return $this;
+    }
+
+    /**
      * Gets documentUrl
      *
      * @return string|null
@@ -597,6 +633,30 @@ class Tracking implements ModelInterface, ArrayAccess
     public function setDocumentTitle($documentTitle)
     {
         $this->container['documentTitle'] = $documentTitle;
+
+        return $this;
+    }
+
+    /**
+     * Gets parentTitle
+     *
+     * @return string|null
+     */
+    public function getParentTitle()
+    {
+        return $this->container['parentTitle'];
+    }
+
+    /**
+     * Sets parentTitle
+     *
+     * @param string|null $parentTitle parentTitle
+     *
+     * @return $this
+     */
+    public function setParentTitle($parentTitle)
+    {
+        $this->container['parentTitle'] = $parentTitle;
 
         return $this;
     }
