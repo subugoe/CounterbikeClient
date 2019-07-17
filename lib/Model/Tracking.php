@@ -61,6 +61,7 @@ class Tracking implements ModelInterface, ArrayAccess
         'id' => 'int',
         'customerId' => 'string',
         'clientIP' => 'string',
+        'userAgent' => 'string',
         'platform' => 'string',
         'docDatabase' => 'string',
         'trackingEvent' => 'string',
@@ -100,6 +101,7 @@ class Tracking implements ModelInterface, ArrayAccess
         'id' => null,
         'customerId' => null,
         'clientIP' => null,
+        'userAgent' => null,
         'platform' => null,
         'docDatabase' => null,
         'trackingEvent' => null,
@@ -160,6 +162,7 @@ class Tracking implements ModelInterface, ArrayAccess
         'id' => 'id',
         'customerId' => 'customerId',
         'clientIP' => 'clientIP',
+        'userAgent' => 'userAgent',
         'platform' => 'platform',
         'docDatabase' => 'docDatabase',
         'trackingEvent' => 'trackingEvent',
@@ -199,6 +202,7 @@ class Tracking implements ModelInterface, ArrayAccess
         'id' => 'setId',
         'customerId' => 'setCustomerId',
         'clientIP' => 'setClientIP',
+        'userAgent' => 'setUserAgent',
         'platform' => 'setPlatform',
         'docDatabase' => 'setDocDatabase',
         'trackingEvent' => 'setTrackingEvent',
@@ -238,6 +242,7 @@ class Tracking implements ModelInterface, ArrayAccess
         'id' => 'getId',
         'customerId' => 'getCustomerId',
         'clientIP' => 'getClientIP',
+        'userAgent' => 'getUserAgent',
         'platform' => 'getPlatform',
         'docDatabase' => 'getDocDatabase',
         'trackingEvent' => 'getTrackingEvent',
@@ -331,6 +336,7 @@ class Tracking implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
         $this->container['clientIP'] = isset($data['clientIP']) ? $data['clientIP'] : null;
+        $this->container['userAgent'] = isset($data['userAgent']) ? $data['userAgent'] : null;
         $this->container['platform'] = isset($data['platform']) ? $data['platform'] : null;
         $this->container['docDatabase'] = isset($data['docDatabase']) ? $data['docDatabase'] : null;
         $this->container['trackingEvent'] = isset($data['trackingEvent']) ? $data['trackingEvent'] : null;
@@ -370,6 +376,9 @@ class Tracking implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['userAgent'] === null) {
+            $invalidProperties[] = "'userAgent' can't be null";
+        }
         if ($this->container['platform'] === null) {
             $invalidProperties[] = "'platform' can't be null";
         }
@@ -465,6 +474,30 @@ class Tracking implements ModelInterface, ArrayAccess
     public function setClientIP($clientIP)
     {
         $this->container['clientIP'] = $clientIP;
+
+        return $this;
+    }
+
+    /**
+     * Gets userAgent
+     *
+     * @return string
+     */
+    public function getUserAgent()
+    {
+        return $this->container['userAgent'];
+    }
+
+    /**
+     * Sets userAgent
+     *
+     * @param string $userAgent userAgent
+     *
+     * @return $this
+     */
+    public function setUserAgent($userAgent)
+    {
+        $this->container['userAgent'] = $userAgent;
 
         return $this;
     }
