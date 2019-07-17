@@ -98,6 +98,13 @@ class TrackingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "userAgent"
+     */
+    public function testPropertyUserAgent()
+    {
+    }
+
+    /**
      * Test attribute "platform"
      */
     public function testPropertyPlatform()

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **customerId** | **string** |  | [optional] 
 **clientIP** | **string** |  | [optional] 
+**userAgent** | **string** |  | 
 **platform** | **string** |  | 
 **docDatabase** | **string** |  | [optional] 
 **trackingEvent** | **string** |  | 
