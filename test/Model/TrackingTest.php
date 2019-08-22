@@ -91,6 +91,20 @@ class TrackingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "institutionName"
+     */
+    public function testPropertyInstitutionName()
+    {
+    }
+
+    /**
+     * Test attribute "institutionId"
+     */
+    public function testPropertyInstitutionId()
+    {
+    }
+
+    /**
      * Test attribute "clientIP"
      */
     public function testPropertyClientIP()
@@ -178,6 +192,13 @@ class TrackingTest extends \PHPUnit_Framework_TestCase
      * Test attribute "publisher"
      */
     public function testPropertyPublisher()
+    {
+    }
+
+    /**
+     * Test attribute "publisherId"
+     */
+    public function testPropertyPublisherId()
     {
     }
 
