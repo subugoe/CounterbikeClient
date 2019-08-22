@@ -60,6 +60,8 @@ class Tracking implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'id' => 'int',
         'customerId' => 'string',
+        'institutionName' => 'string',
+        'institutionId' => 'string',
         'clientIP' => 'string',
         'userAgent' => 'string',
         'platform' => 'string',
@@ -73,6 +75,7 @@ class Tracking implements ModelInterface, ArrayAccess
         'chapter' => 'string',
         'author' => 'string',
         'publisher' => 'string',
+        'publisherId' => 'string',
         'issnPrint' => 'string',
         'issnOnline' => 'string',
         'isbn' => 'string',
@@ -100,6 +103,8 @@ class Tracking implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'customerId' => null,
+        'institutionName' => null,
+        'institutionId' => null,
         'clientIP' => null,
         'userAgent' => null,
         'platform' => null,
@@ -113,6 +118,7 @@ class Tracking implements ModelInterface, ArrayAccess
         'chapter' => null,
         'author' => null,
         'publisher' => null,
+        'publisherId' => null,
         'issnPrint' => null,
         'issnOnline' => null,
         'isbn' => null,
@@ -161,6 +167,8 @@ class Tracking implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'customerId' => 'customerId',
+        'institutionName' => 'institutionName',
+        'institutionId' => 'institutionId',
         'clientIP' => 'clientIP',
         'userAgent' => 'userAgent',
         'platform' => 'platform',
@@ -174,6 +182,7 @@ class Tracking implements ModelInterface, ArrayAccess
         'chapter' => 'chapter',
         'author' => 'author',
         'publisher' => 'publisher',
+        'publisherId' => 'publisherId',
         'issnPrint' => 'issnPrint',
         'issnOnline' => 'issnOnline',
         'isbn' => 'isbn',
@@ -201,6 +210,8 @@ class Tracking implements ModelInterface, ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'customerId' => 'setCustomerId',
+        'institutionName' => 'setInstitutionName',
+        'institutionId' => 'setInstitutionId',
         'clientIP' => 'setClientIP',
         'userAgent' => 'setUserAgent',
         'platform' => 'setPlatform',
@@ -214,6 +225,7 @@ class Tracking implements ModelInterface, ArrayAccess
         'chapter' => 'setChapter',
         'author' => 'setAuthor',
         'publisher' => 'setPublisher',
+        'publisherId' => 'setPublisherId',
         'issnPrint' => 'setIssnPrint',
         'issnOnline' => 'setIssnOnline',
         'isbn' => 'setIsbn',
@@ -241,6 +253,8 @@ class Tracking implements ModelInterface, ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'customerId' => 'getCustomerId',
+        'institutionName' => 'getInstitutionName',
+        'institutionId' => 'getInstitutionId',
         'clientIP' => 'getClientIP',
         'userAgent' => 'getUserAgent',
         'platform' => 'getPlatform',
@@ -254,6 +268,7 @@ class Tracking implements ModelInterface, ArrayAccess
         'chapter' => 'getChapter',
         'author' => 'getAuthor',
         'publisher' => 'getPublisher',
+        'publisherId' => 'getPublisherId',
         'issnPrint' => 'getIssnPrint',
         'issnOnline' => 'getIssnOnline',
         'isbn' => 'getIsbn',
@@ -335,6 +350,8 @@ class Tracking implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
+        $this->container['institutionName'] = isset($data['institutionName']) ? $data['institutionName'] : null;
+        $this->container['institutionId'] = isset($data['institutionId']) ? $data['institutionId'] : null;
         $this->container['clientIP'] = isset($data['clientIP']) ? $data['clientIP'] : null;
         $this->container['userAgent'] = isset($data['userAgent']) ? $data['userAgent'] : null;
         $this->container['platform'] = isset($data['platform']) ? $data['platform'] : null;
@@ -348,6 +365,7 @@ class Tracking implements ModelInterface, ArrayAccess
         $this->container['chapter'] = isset($data['chapter']) ? $data['chapter'] : null;
         $this->container['author'] = isset($data['author']) ? $data['author'] : null;
         $this->container['publisher'] = isset($data['publisher']) ? $data['publisher'] : null;
+        $this->container['publisherId'] = isset($data['publisherId']) ? $data['publisherId'] : null;
         $this->container['issnPrint'] = isset($data['issnPrint']) ? $data['issnPrint'] : null;
         $this->container['issnOnline'] = isset($data['issnOnline']) ? $data['issnOnline'] : null;
         $this->container['isbn'] = isset($data['isbn']) ? $data['isbn'] : null;
@@ -443,13 +461,61 @@ class Tracking implements ModelInterface, ArrayAccess
     /**
      * Sets customerId
      *
-     * @param string|null $customerId customerId
+     * @param string|null $customerId Customer Id.
      *
      * @return $this
      */
     public function setCustomerId($customerId)
     {
         $this->container['customerId'] = $customerId;
+
+        return $this;
+    }
+
+    /**
+     * Gets institutionName
+     *
+     * @return string|null
+     */
+    public function getInstitutionName()
+    {
+        return $this->container['institutionName'];
+    }
+
+    /**
+     * Sets institutionName
+     *
+     * @param string|null $institutionName Institution Name.
+     *
+     * @return $this
+     */
+    public function setInstitutionName($institutionName)
+    {
+        $this->container['institutionName'] = $institutionName;
+
+        return $this;
+    }
+
+    /**
+     * Gets institutionId
+     *
+     * @return string|null
+     */
+    public function getInstitutionId()
+    {
+        return $this->container['institutionId'];
+    }
+
+    /**
+     * Sets institutionId
+     *
+     * @param string|null $institutionId Institution Id.
+     *
+     * @return $this
+     */
+    public function setInstitutionId($institutionId)
+    {
+        $this->container['institutionId'] = $institutionId;
 
         return $this;
     }
@@ -767,6 +833,30 @@ class Tracking implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets publisherId
+     *
+     * @return string|null
+     */
+    public function getPublisherId()
+    {
+        return $this->container['publisherId'];
+    }
+
+    /**
+     * Sets publisherId
+     *
+     * @param string|null $publisherId Publisher Id.
+     *
+     * @return $this
+     */
+    public function setPublisherId($publisherId)
+    {
+        $this->container['publisherId'] = $publisherId;
+
+        return $this;
+    }
+
+    /**
      * Gets issnPrint
      *
      * @return string|null
@@ -779,7 +869,7 @@ class Tracking implements ModelInterface, ArrayAccess
     /**
      * Sets issnPrint
      *
-     * @param string|null $issnPrint Print International Standard Serial Number
+     * @param string|null $issnPrint Print International Standard Serial Number.
      *
      * @return $this
      */
@@ -803,7 +893,7 @@ class Tracking implements ModelInterface, ArrayAccess
     /**
      * Sets issnOnline
      *
-     * @param string|null $issnOnline Online International Standard Serial Number
+     * @param string|null $issnOnline Online International Standard Serial Number.
      *
      * @return $this
      */
@@ -827,7 +917,7 @@ class Tracking implements ModelInterface, ArrayAccess
     /**
      * Sets isbn
      *
-     * @param string|null $isbn International Standard Book Number
+     * @param string|null $isbn International Standard Book Number.
      *
      * @return $this
      */
@@ -851,7 +941,7 @@ class Tracking implements ModelInterface, ArrayAccess
     /**
      * Sets isan
      *
-     * @param string|null $isan International Standard Audiovisual Number
+     * @param string|null $isan International Standard Audiovisual Number.
      *
      * @return $this
      */
@@ -875,7 +965,7 @@ class Tracking implements ModelInterface, ArrayAccess
     /**
      * Sets ismn
      *
-     * @param string|null $ismn International Standard Music Number
+     * @param string|null $ismn International Standard Music Number.
      *
      * @return $this
      */
@@ -899,7 +989,7 @@ class Tracking implements ModelInterface, ArrayAccess
     /**
      * Sets isrc
      *
-     * @param string|null $isrc The International Standard Recording Code
+     * @param string|null $isrc The International Standard Recording Code.
      *
      * @return $this
      */
@@ -923,7 +1013,7 @@ class Tracking implements ModelInterface, ArrayAccess
     /**
      * Sets istc
      *
-     * @param string|null $istc International Standard Text Code
+     * @param string|null $istc International Standard Text Code.
      *
      * @return $this
      */
@@ -947,7 +1037,7 @@ class Tracking implements ModelInterface, ArrayAccess
     /**
      * Sets doi
      *
-     * @param string|null $doi Digital Object Identifier
+     * @param string|null $doi Digital Object Identifier.
      *
      * @return $this
      */
