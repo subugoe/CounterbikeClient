@@ -642,8 +642,6 @@ class Tracking implements ModelInterface, ArrayAccess
 
     /**
      * Gets sectionType
-     *
-     * @return string|null
      */
     public function getSectionType(): ?string
     {
@@ -660,8 +658,6 @@ class Tracking implements ModelInterface, ArrayAccess
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
-     *
-     * @return array
      */
     public static function getters(): array
     {
@@ -670,8 +666,6 @@ class Tracking implements ModelInterface, ArrayAccess
 
     /**
      * Gets trackingDate
-     *
-     * @return \DateTime|null
      */
     public function getTrackingDate(): ?\DateTime
     {
@@ -691,13 +685,11 @@ class Tracking implements ModelInterface, ArrayAccess
      */
     public function getUserAgent(): string
     {
-        return $this->container['userAgent'];
+        return (string) $this->container['userAgent'];
     }
 
     /**
      * Gets yop
-     *
-     * @return string|null
      */
     public function getYop(): ?string
     {
@@ -734,10 +726,8 @@ class Tracking implements ModelInterface, ArrayAccess
      * Returns true if offset exists. False otherwise.
      *
      * @param integer $offset Offset
-     *
-     * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -751,7 +741,7 @@ class Tracking implements ModelInterface, ArrayAccess
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
