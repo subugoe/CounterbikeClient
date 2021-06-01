@@ -272,6 +272,7 @@ class Tracking implements ModelInterface, ArrayAccess
         'created' => 'setCreated',
         'trackingDate' => 'setTrackingDate'
     ];
+    private string $apiKey = '';
 
     /**
      * Constructor
@@ -361,6 +362,11 @@ class Tracking implements ModelInterface, ArrayAccess
     public function getAccessType(): ?string
     {
         return $this->container['accessType'];
+    }
+
+    public function getApiKey(): string
+    {
+        return $this->apiKey;
     }
 
     /**
@@ -819,6 +825,11 @@ class Tracking implements ModelInterface, ArrayAccess
         $this->container['accessType'] = $accessType;
 
         return $this;
+    }
+
+    public function setApiKey(string $apiKey)
+    {
+        $this->apiKey = $apiKey;
     }
 
     /**
