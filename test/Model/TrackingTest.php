@@ -84,6 +84,13 @@ class TrackingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "apiKey"
+     */
+    public function testPropertyApiKey()
+    {
+    }
+
+    /**
      * Test attribute "customerId"
      */
     public function testPropertyCustomerId()
