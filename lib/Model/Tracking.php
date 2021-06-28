@@ -59,6 +59,7 @@ class Tracking implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'id' => 'int',
+        'apiKey' => 'string',
         'customerId' => 'string',
         'institutionName' => 'string',
         'institutionId' => 'string',
@@ -102,6 +103,7 @@ class Tracking implements ModelInterface, ArrayAccess
       */
     protected static $openAPIFormats = [
         'id' => null,
+        'apiKey' => null,
         'customerId' => null,
         'institutionName' => null,
         'institutionId' => null,
@@ -166,6 +168,7 @@ class Tracking implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'apiKey' => 'apiKey',
         'customerId' => 'customerId',
         'institutionName' => 'institutionName',
         'institutionId' => 'institutionId',
@@ -209,6 +212,7 @@ class Tracking implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'apiKey' => 'setApiKey',
         'customerId' => 'setCustomerId',
         'institutionName' => 'setInstitutionName',
         'institutionId' => 'setInstitutionId',
@@ -252,6 +256,7 @@ class Tracking implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'apiKey' => 'getApiKey',
         'customerId' => 'getCustomerId',
         'institutionName' => 'getInstitutionName',
         'institutionId' => 'getInstitutionId',
@@ -349,6 +354,7 @@ class Tracking implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['apiKey'] = isset($data['apiKey']) ? $data['apiKey'] : null;
         $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
         $this->container['institutionName'] = isset($data['institutionName']) ? $data['institutionName'] : null;
         $this->container['institutionId'] = isset($data['institutionId']) ? $data['institutionId'] : null;
@@ -444,6 +450,30 @@ class Tracking implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets apiKey
+     *
+     * @return string|null
+     */
+    public function getApiKey()
+    {
+        return $this->container['apiKey'];
+    }
+
+    /**
+     * Sets apiKey
+     *
+     * @param string|null $apiKey API key.
+     *
+     * @return $this
+     */
+    public function setApiKey($apiKey)
+    {
+        $this->container['apiKey'] = $apiKey;
 
         return $this;
     }

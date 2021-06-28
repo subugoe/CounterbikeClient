@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
+**apiKey** | **string** | API key. | [optional] 
 **customerId** | **string** | Customer Id. | [optional] 
 **institutionName** | **string** | Institution Name. | [optional] 
 **institutionId** | **string** | Institution Id. | [optional] 
