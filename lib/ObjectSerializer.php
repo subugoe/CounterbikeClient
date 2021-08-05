@@ -50,7 +50,7 @@ class ObjectSerializer
      *
      * @return string|object serialized form of $data
      */
-    public static function sanitizeForSerialization($data, $type = null, $format = null)
+    public static function sanitizeForSerialization($data, string $type = null, string $format = null)
     {
         if (is_scalar($data) || null === $data) {
             return $data;
@@ -96,9 +96,9 @@ class ObjectSerializer
      *
      * @param string $filename filename to be sanitized
      *
-     * @return string the sanitized filename
+     * @return mixed|string|void the sanitized filename
      */
-    public static function sanitizeFilename($filename)
+    public static function sanitizeFilename(string $filename)
     {
         if (preg_match("/.*[\/\\\\](.*)$/", $filename, $match)) {
             return $match[1];
@@ -115,7 +115,7 @@ class ObjectSerializer
      *
      * @return string the serialized object
      */
-    public static function toPathValue($value)
+    public static function toPathValue(string $value): string
     {
         return rawurlencode(self::toString($value));
     }
@@ -128,7 +128,7 @@ class ObjectSerializer
      *
      * @param string[]|string|\DateTime $object an object to be serialized to a string
      *
-     * @return string the serialized object
+     * @return string|void the serialized object
      */
     public static function toQueryValue($object)
     {
@@ -148,7 +148,7 @@ class ObjectSerializer
      *
      * @return string the header string
      */
-    public static function toHeaderValue($value)
+    public static function toHeaderValue(string $value): string
     {
         return self::toString($value);
     }
@@ -160,7 +160,7 @@ class ObjectSerializer
      *
      * @param string|\SplFileObject $value the value of the form parameter
      *
-     * @return string the form string
+     * @return string|bool|void the form string
      */
     public static function toFormValue($value)
     {
@@ -178,7 +178,7 @@ class ObjectSerializer
      *
      * @param string|\DateTime $value the value of the parameter
      *
-     * @return string the header string
+     * @return string|void the header string
      */
     public static function toString($value)
     {
@@ -197,14 +197,14 @@ class ObjectSerializer
      * ssv, tsv, pipes, multi)
      * @param bool   $allowCollectionFormatMulti allow collection format to be a multidimensional array
      *
-     * @return string
+     * @return string|null|void
      */
-    public static function serializeCollection(array $collection, $collectionFormat, $allowCollectionFormatMulti = false)
+    public static function serializeCollection(array $collection, string $collectionFormat, bool $allowCollectionFormatMulti = false)
     {
         if ($allowCollectionFormatMulti && ('multi' === $collectionFormat)) {
             // http_build_query() almost does the job for us. We just
             // need to fix the result of multidimensional arrays.
-            return preg_replace('/%5B[0-9]+%5D=/', '=', http_build_query($collection, '', '&'));
+            return preg_replace('/%5B\d+%5D=/', '=', http_build_query($collection, '', '&'));
         }
         switch ($collectionFormat) {
             case 'pipes':
@@ -233,16 +233,16 @@ class ObjectSerializer
      *
      * @return object|array|null a single or an array of $class instances
      */
-    public static function deserialize($data, $class, $httpHeaders = null)
+    public static function deserialize($data, string $class, array $httpHeaders = null)
     {
         if (null === $data) {
             return null;
         } elseif (substr($class, 0, 4) === 'map[') { // for associative array e.g. map[string,int]
             $data = is_string($data) ? json_decode($data) : $data;
-            settype($data, 'array');
+            $data = (array) $data;
             $inner = substr($class, 4, -1);
             $deserialized = [];
-            if (strrpos($inner, ",") !== false) {
+            if (strrpos($inner, ',') !== false) {
                 $subClass_array = explode(',', $inner, 2);
                 $subClass = $subClass_array[1];
                 foreach ($data as $key => $value) {
@@ -259,8 +259,8 @@ class ObjectSerializer
             }
             return $values;
         } elseif ($class === 'object') {
-            settype($data, 'array');
-            return $data;
+            $data = (array) $data;
+            return (array) $data;
         } elseif ($class === '\DateTime') {
             // Some API's return an invalid, empty string as a
             // date-time property. DateTime::__construct() will return
