@@ -396,7 +396,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return array invalid properties with reasons
      */
-    public function listInvalidProperties()
+    public function listInvalidProperties(): array
     {
         $invalidProperties = [];
 
@@ -424,7 +424,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return bool True if all properties are valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return count($this->listInvalidProperties()) === 0;
     }
@@ -447,7 +447,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setId($id)
+    public function setId($id): static
     {
         $this->container['id'] = $id;
 
@@ -471,7 +471,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setApiKey($apiKey)
+    public function setApiKey($apiKey): static
     {
         $this->container['apiKey'] = $apiKey;
 
@@ -495,7 +495,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setCustomerId($customerId)
+    public function setCustomerId($customerId): static
     {
         $this->container['customerId'] = $customerId;
 
@@ -519,7 +519,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setInstitutionName($institutionName)
+    public function setInstitutionName($institutionName): static
     {
         $this->container['institutionName'] = $institutionName;
 
@@ -543,7 +543,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setInstitutionId($institutionId)
+    public function setInstitutionId($institutionId): static
     {
         $this->container['institutionId'] = $institutionId;
 
@@ -567,7 +567,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setClientIP($clientIP)
+    public function setClientIP($clientIP): static
     {
         $this->container['clientIP'] = $clientIP;
 
@@ -591,7 +591,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setUserAgent($userAgent)
+    public function setUserAgent($userAgent): static
     {
         $this->container['userAgent'] = $userAgent;
 
@@ -615,7 +615,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setPlatform($platform)
+    public function setPlatform($platform): static
     {
         $this->container['platform'] = $platform;
 
@@ -639,7 +639,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDocDatabase($docDatabase)
+    public function setDocDatabase($docDatabase): static
     {
         $this->container['docDatabase'] = $docDatabase;
 
@@ -663,7 +663,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setTrackingEvent($trackingEvent)
+    public function setTrackingEvent($trackingEvent): static
     {
         $this->container['trackingEvent'] = $trackingEvent;
 
@@ -687,7 +687,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDocumentId($documentId)
+    public function setDocumentId($documentId): static
     {
         $this->container['documentId'] = $documentId;
 
@@ -711,7 +711,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setParentId($parentId)
+    public function setParentId($parentId): static
     {
         $this->container['parentId'] = $parentId;
 
@@ -735,7 +735,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDocumentUrl($documentUrl)
+    public function setDocumentUrl($documentUrl): static
     {
         $this->container['documentUrl'] = $documentUrl;
 
@@ -759,7 +759,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDocumentTitle($documentTitle)
+    public function setDocumentTitle($documentTitle): static
     {
         $this->container['documentTitle'] = $documentTitle;
 
@@ -783,7 +783,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setParentTitle($parentTitle)
+    public function setParentTitle($parentTitle): static
     {
         $this->container['parentTitle'] = $parentTitle;
 
@@ -807,7 +807,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setChapter($chapter)
+    public function setChapter($chapter): static
     {
         $this->container['chapter'] = $chapter;
 
@@ -831,7 +831,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setAuthor($author)
+    public function setAuthor($author): static
     {
         $this->container['author'] = $author;
 
@@ -855,7 +855,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setPublisher($publisher)
+    public function setPublisher($publisher): static
     {
         $this->container['publisher'] = $publisher;
 
@@ -879,7 +879,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setPublisherId($publisherId)
+    public function setPublisherId($publisherId): static
     {
         $this->container['publisherId'] = $publisherId;
 
@@ -903,7 +903,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setIssnPrint($issnPrint)
+    public function setIssnPrint($issnPrint): static
     {
         $this->container['issnPrint'] = $issnPrint;
 
@@ -927,7 +927,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setIssnOnline($issnOnline)
+    public function setIssnOnline($issnOnline): static
     {
         $this->container['issnOnline'] = $issnOnline;
 
@@ -951,7 +951,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setIsbn($isbn)
+    public function setIsbn($isbn): static
     {
         $this->container['isbn'] = $isbn;
 
@@ -975,7 +975,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setIsan($isan)
+    public function setIsan($isan): static
     {
         $this->container['isan'] = $isan;
 
@@ -999,7 +999,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setIsmn($ismn)
+    public function setIsmn($ismn): static
     {
         $this->container['ismn'] = $ismn;
 
@@ -1023,7 +1023,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setIsrc($isrc)
+    public function setIsrc($isrc): static
     {
         $this->container['isrc'] = $isrc;
 
@@ -1047,7 +1047,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setIstc($istc)
+    public function setIstc($istc): static
     {
         $this->container['istc'] = $istc;
 
@@ -1071,7 +1071,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDoi($doi)
+    public function setDoi($doi): static
     {
         $this->container['doi'] = $doi;
 
@@ -1095,7 +1095,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setProprietaryId($proprietaryId)
+    public function setProprietaryId($proprietaryId): static
     {
         $this->container['proprietaryId'] = $proprietaryId;
 
@@ -1119,7 +1119,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setAccessMethod($accessMethod)
+    public function setAccessMethod($accessMethod): static
     {
         $this->container['accessMethod'] = $accessMethod;
 
@@ -1143,7 +1143,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setAccessType($accessType)
+    public function setAccessType($accessType): static
     {
         $this->container['accessType'] = $accessType;
 
@@ -1167,7 +1167,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setDataType($dataType)
+    public function setDataType($dataType): static
     {
         $this->container['dataType'] = $dataType;
 
@@ -1191,7 +1191,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setSectionType($sectionType)
+    public function setSectionType($sectionType): static
     {
         $this->container['sectionType'] = $sectionType;
 
@@ -1215,7 +1215,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setYop($yop)
+    public function setYop($yop): static
     {
         $this->container['yop'] = $yop;
 
@@ -1239,7 +1239,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): static
     {
         $this->container['sessionId'] = $sessionId;
 
@@ -1263,7 +1263,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setCreated($created)
+    public function setCreated($created): static
     {
         $this->container['created'] = $created;
 
@@ -1287,7 +1287,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return $this
      */
-    public function setTrackingDate($trackingDate)
+    public function setTrackingDate($trackingDate): static
     {
         $this->container['trackingDate'] = $trackingDate;
 
@@ -1325,7 +1325,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -1341,7 +1341,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }
@@ -1351,7 +1351,7 @@ class Tracking implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return (string) json_encode(
             ObjectSerializer::sanitizeForSerialization($this),

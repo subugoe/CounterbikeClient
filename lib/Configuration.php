@@ -343,7 +343,7 @@ class Configuration
      */
     public static function getDefaultConfiguration(): \Subugoe\CounterClient\Configuration
     {
-        if (self::$defaultConfiguration === null) {
+        if (!self::$defaultConfiguration instanceof \Subugoe\CounterClient\Configuration) {
             self::$defaultConfiguration = new Configuration();
         }
 

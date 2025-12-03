@@ -98,7 +98,7 @@ class ObjectSerializer
      *
      * @return mixed|string|void the sanitized filename
      */
-    public static function sanitizeFilename(string $filename)
+    public static function sanitizeFilename(string $filename): string
     {
         if (preg_match("/.*[\/\\\\](.*)$/", $filename, $match)) {
             return $match[1];
@@ -199,7 +199,7 @@ class ObjectSerializer
      *
      * @return string|null|void
      */
-    public static function serializeCollection(array $collection, string $collectionFormat, bool $allowCollectionFormatMulti = false)
+    public static function serializeCollection(array $collection, string $collectionFormat, bool $allowCollectionFormatMulti = false): ?string
     {
         if ($allowCollectionFormatMulti && ('multi' === $collectionFormat)) {
             // http_build_query() almost does the job for us. We just

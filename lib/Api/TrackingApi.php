@@ -116,8 +116,8 @@ class TrackingApi
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() !== null ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() !== null ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() instanceof \Psr\Http\Message\ResponseInterface ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() instanceof \Psr\Http\Message\ResponseInterface ? $e->getResponse()->getBody()->getContents() : null
                 );
             }
 
@@ -297,7 +297,7 @@ class TrackingApi
             } else {
                 $httpBody = $_tempBody;
             }
-        } elseif (count($formParams) > 0) {
+        } elseif ($formParams !== []) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -333,7 +333,7 @@ class TrackingApi
         $query = Query::build($queryParams);
         return new Request(
             'GET',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->config->getHost() . $resourcePath . ($query !== '' && $query !== '0' ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
@@ -378,8 +378,8 @@ class TrackingApi
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() !== null ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() !== null ? $e->getResponse()->getBody()->getContents() : null
+                    $e->getResponse() instanceof \Psr\Http\Message\ResponseInterface ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() instanceof \Psr\Http\Message\ResponseInterface ? $e->getResponse()->getBody()->getContents() : null
                 );
             }
 
@@ -548,7 +548,7 @@ class TrackingApi
             } else {
                 $httpBody = $_tempBody;
             }
-        } elseif (count($formParams) > 0) {
+        } elseif ($formParams !== []) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -584,7 +584,7 @@ class TrackingApi
         $query = Query::build($queryParams);
         return new Request(
             'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $this->config->getHost() . $resourcePath . ($query !== '' && $query !== '0' ? "?{$query}" : ''),
             $headers,
             $httpBody
         );
