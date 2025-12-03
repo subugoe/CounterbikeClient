@@ -2,17 +2,32 @@
 
 declare(strict_types=1);
 
-use Rector\Core\Configuration\Option;
-use Rector\Php74\Rector\Property\TypedPropertyRector;
+use Rector\Config\RectorConfig;
 use Rector\Set\ValueObject\SetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    // get parameters
-    $parameters = $containerConfigurator->parameters();
+return static function (RectorConfig $rectorConfig): void {
+    // Ziel-PHP-Version
+    $rectorConfig->phpVersion(80200);
 
-    // Define what rule sets will be applied
-    $containerConfigurator->import(SetList::PHP_74);
-    $containerConfigurator->import(SetList::CODE_QUALITY);
-    $containerConfigurator->import(SetList::TYPE_DECLARATION);
+    // Sets, die mit Rector 1.x kompatibel sind
+    $rectorConfig->sets([
+        SetList::PHP_82,
+        SetList::CODE_QUALITY,
+        SetList::TYPE_DECLARATION,
+    ]);
+
+    // Projektpfade
+    $rectorConfig->paths([
+        __DIR__.'/lib',
+        // __DIR__ . '/src',
+        // __DIR__ . '/public',
+    ]);
+
+    // Skip-Patterns
+    $rectorConfig->skip([
+        __DIR__.'/src/Migrations/*',
+        __DIR__.'/vendor',
+        __DIR__.'/var',
+        __DIR__.'/tests',
+    ]);
 };
