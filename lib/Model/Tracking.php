@@ -431,7 +431,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return int|null
      */
-    public function getId(): int
+    public function getId(): int|null
     {
         return $this->container['id'];
     }
@@ -455,7 +455,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getApiKey(): string
+    public function getApiKey(): string|null
     {
         return $this->container['apiKey'];
     }
@@ -479,7 +479,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getCustomerId(): string
+    public function getCustomerId(): string|null
     {
         return $this->container['customerId'];
     }
@@ -503,7 +503,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getInstitutionName(): string
+    public function getInstitutionName(): string|null
     {
         return $this->container['institutionName'];
     }
@@ -527,7 +527,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getInstitutionId(): string
+    public function getInstitutionId(): string|null
     {
         return $this->container['institutionId'];
     }
@@ -551,7 +551,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getClientIP(): string
+    public function getClientIP(): string|null
     {
         return $this->container['clientIP'];
     }
@@ -573,7 +573,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
     /**
      * Gets userAgent.
      */
-    public function getUserAgent(): string
+    public function getUserAgent(): string|null
     {
         return $this->container['userAgent'];
     }
@@ -595,7 +595,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
     /**
      * Gets platform.
      */
-    public function getPlatform(): string
+    public function getPlatform(): string|null
     {
         return $this->container['platform'];
     }
@@ -619,7 +619,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getDocDatabase(): string
+    public function getDocDatabase(): string|null
     {
         return $this->container['docDatabase'];
     }
@@ -641,7 +641,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
     /**
      * Gets trackingEvent.
      */
-    public function getTrackingEvent(): string
+    public function getTrackingEvent(): string|null
     {
         return $this->container['trackingEvent'];
     }
@@ -665,7 +665,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getDocumentId(): string
+    public function getDocumentId(): string|null
     {
         return $this->container['documentId'];
     }
@@ -689,7 +689,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getParentId(): string
+    public function getParentId(): string|null
     {
         return $this->container['parentId'];
     }
@@ -713,7 +713,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getDocumentUrl(): string
+    public function getDocumentUrl(): string|null
     {
         return $this->container['documentUrl'];
     }
@@ -737,7 +737,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getDocumentTitle(): string
+    public function getDocumentTitle(): string|null
     {
         return $this->container['documentTitle'];
     }
@@ -761,7 +761,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getParentTitle(): string
+    public function getParentTitle(): string|null
     {
         return $this->container['parentTitle'];
     }
@@ -785,7 +785,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getChapter(): string
+    public function getChapter(): string|null
     {
         return $this->container['chapter'];
     }
@@ -809,7 +809,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getAuthor(): string
+    public function getAuthor(): string|null
     {
         return $this->container['author'];
     }
@@ -833,7 +833,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getPublisher(): string
+    public function getPublisher(): string|null
     {
         return $this->container['publisher'];
     }
@@ -857,7 +857,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getPublisherId(): string
+    public function getPublisherId(): string|null
     {
         return $this->container['publisherId'];
     }
@@ -881,7 +881,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getIssnPrint(): string
+    public function getIssnPrint(): string|null
     {
         return $this->container['issnPrint'];
     }
@@ -905,7 +905,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getIssnOnline(): string
+    public function getIssnOnline(): string|null
     {
         return $this->container['issnOnline'];
     }
@@ -929,7 +929,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getIsbn(): string
+    public function getIsbn(): string|null
     {
         return $this->container['isbn'];
     }
@@ -953,7 +953,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getIsan(): string
+    public function getIsan(): string|null
     {
         return $this->container['isan'];
     }
@@ -977,7 +977,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getIsmn(): string
+    public function getIsmn(): string|null
     {
         return $this->container['ismn'];
     }
@@ -1001,7 +1001,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getIsrc(): string
+    public function getIsrc(): string|null
     {
         return $this->container['isrc'];
     }
@@ -1025,7 +1025,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getIstc(): string
+    public function getIstc(): string|null
     {
         return $this->container['istc'];
     }
@@ -1049,7 +1049,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getDoi(): string
+    public function getDoi(): string|null
     {
         return $this->container['doi'];
     }
@@ -1073,7 +1073,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getProprietaryId(): string
+    public function getProprietaryId(): string|null
     {
         return $this->container['proprietaryId'];
     }
@@ -1097,7 +1097,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getAccessMethod(): string
+    public function getAccessMethod(): string|null
     {
         return $this->container['accessMethod'];
     }
@@ -1121,7 +1121,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getAccessType(): string
+    public function getAccessType(): string|null
     {
         return $this->container['accessType'];
     }
@@ -1145,7 +1145,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getDataType(): string
+    public function getDataType(): string|null
     {
         return $this->container['dataType'];
     }
@@ -1169,7 +1169,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getSectionType(): string
+    public function getSectionType(): string|null
     {
         return $this->container['sectionType'];
     }
@@ -1193,7 +1193,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return string|null
      */
-    public function getYop(): string
+    public function getYop(): string|null
     {
         return $this->container['yop'];
     }
@@ -1215,7 +1215,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
     /**
      * Gets sessionId.
      */
-    public function getSessionId(): string
+    public function getSessionId(): string|null
     {
         return $this->container['sessionId'];
     }
@@ -1237,7 +1237,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
     /**
      * Gets created.
      */
-    public function getCreated(): int
+    public function getCreated(): int|null
     {
         return $this->container['created'];
     }
@@ -1261,7 +1261,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @return \DateTime|null
      */
-    public function getTrackingDate(): \DateTime
+    public function getTrackingDate(): \DateTime|null
     {
         return $this->container['trackingDate'];
     }
@@ -1275,9 +1275,30 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      */
     public function setTrackingDate($trackingDate): static
     {
-        $this->container['trackingDate'] = $trackingDate;
+        $this->container['trackingDate'] = $this->normalizeDateTime($trackingDate);
 
         return $this;
+    }
+
+    private function normalizeDateTime($dateTime): ?\DateTime
+    {
+        if ($dateTime === null) {
+            return null;
+        }
+
+        if ($dateTime instanceof \DateTime) {
+            return $dateTime;
+        }
+
+        if (is_string($dateTime)) {
+            try {
+                return new \DateTime($dateTime);
+            } catch (\Exception $e) {
+                throw new \InvalidArgumentException('Invalid Date format: ' . $dateTime);
+            }
+        }
+
+        throw new \InvalidArgumentException('trackingDate must be of \DateTime, String or null');
     }
 
     /**
@@ -1295,7 +1316,7 @@ class Tracking implements \Stringable, ModelInterface, \ArrayAccess
      *
      * @param int $offset Offset
      */
-    public function offsetGet($offset): int
+    public function offsetGet($offset): int|null
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
